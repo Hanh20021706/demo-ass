@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+
+
+
+
+/* categories */
+.categories-item{
+    background-color: #E5E5E3;
+    
+}
+.item-boder{
+    border: 1px solid #ccc;
+}

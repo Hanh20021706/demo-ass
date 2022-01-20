@@ -5,10 +5,471 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="./style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="">
+      <header class="relative bg-white">
+        <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="border-b border-gray-200">
+            <div class="h-16 flex items-center">
+              <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+              <button
+                type="button"
+                class="bg-white p-2 rounded-md text-gray-400 lg:hidden"
+              >
+                <span class="sr-only">Open menu</span>
+                <!-- Heroicon name: outline/menu -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+
+              <!-- Logo -->
+              <div class="ml-4 flex lg:ml-0">
+                <a href="#">
+                  <span class="sr-only">Workflow</span>
+                  <img
+                    class="h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                    alt=""
+                  />
+                </a>
+              </div>
+
+              <!-- Flyout menus -->
+              <div class="hidden lg:ml-8 lg:block lg:self-stretch">
+                <div class="h-full flex space-x-8">
+                  <div class="flex">
+                    <div class="relative flex">
+                      <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
+                      <button
+                        type="button"
+                        class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
+                        aria-expanded="false"
+                      >
+                        Women
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="flex">
+                    <div class="relative flex">
+                      <button
+                        type="button"
+                        class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
+                        aria-expanded="false"
+                      >
+                        Men
+                      </button>
+                    </div>
+
+                    <div
+                      class="absolute top-full inset-x-0 text-sm text-gray-500"
+                    >
+                      <div
+                        class="absolute inset-0 top-1/2 bg-white shadow"
+                        aria-hidden="true"
+                      ></div>
+                    </div>
+                  </div>
+
+                  <a
+                    href="#"
+                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >Company</a
+                  >
+
+                  <a
+                    href="#"
+                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >Stores</a
+                  >
+                </div>
+              </div>
+
+              <div class="ml-auto flex items-center">
+                <div
+                  class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6"
+                >
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >Sign in</a
+                  >
+                  <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >Create account</a
+                  >
+                </div>
+
+                <div class="hidden lg:ml-8 lg:flex">
+                  <a
+                    href="#"
+                    class="text-gray-700 hover:text-gray-800 flex items-center"
+                  >
+                    <img
+                      src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      alt=""
+                      class="w-5 h-auto block flex-shrink-0"
+                    />
+                    <span class="ml-3 block text-sm font-medium"> CAD </span>
+                    <span class="sr-only">, change currency</span>
+                  </a>
+                </div>
+
+                <!-- Search -->
+                <div class="flex lg:ml-6">
+                  <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Search</span>
+                    <!-- Heroicon name: outline/search -->
+                    <svg
+                      class="w-6 h-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <!-- Cart -->
+                <div class="ml-4 flow-root lg:ml-6">
+                  <a href="#" class="group -m-2 p-2 flex items-center">
+                    <!-- Heroicon name: outline/shopping-bag -->
+                    <svg
+                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                      />
+                    </svg>
+                    <span
+                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
+                      >0</span
+                    >
+                    <span class="sr-only">items in cart, view bag</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="banner">
+        <img
+          class="w-full"
+          src="https://kaia.vn/wp-content/uploads/2018/03/BANNER-VONG-TAY.jpg"
+          alt=""
+        />
+      </div>
+      <main class="max-w-7xl mx-auto px-4 mt-6">
+        <!--  favorites -->
+        <div class="">
+          <div class="flex justify-between">
+            <h3 class="text-[25px] font-light text-red-700">Our favorites</h3>
+          </div>
+          <div class="grid grid-cols-3 gap-[50px] mt-8">
+            <div class="">
+              <a href="">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/564x/3b/93/6b/3b936b1acfb5ae2300f845775dc00016.jpg"
+                  alt=""
+                />
+              </a>
+
+              <h4 class="mt-6 mb-2 text-red-700">
+                <a href=""> Long Twist Earrings</a>
+              </h4>
+              <span class="text-slate-500"> $49.98 </span>
+            </div>
+            <div class="">
+              <a href="">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/564x/db/13/41/db1341f08f252f26a314546a2de7e72c.jpg"
+                  alt=""
+                />
+              </a>
+
+              <h4 class="mt-6 mb-2 text-red-700">
+                <a href=""> Long Twist Earrings</a>
+              </h4>
+              <span class="text-slate-500"> $49.98 </span>
+            </div>
+            <div class="">
+              <a href="">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/736x/b3/c8/80/b3c880c7518036f0a61366e0d4c80574.jpg"
+                  alt=""
+                />
+              </a>
+
+              <h4 class="mt-6 mb-2 text-red-700">
+                <a href=""> Long Twist Earrings</a>
+              </h4>
+              <span class="text-slate-500"> $49.98 </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- post -->
+        <div class="grid grid-cols-2 mt-[80px] gap-[80px]">
+          <div class="">
+            <a href="#" class="justify-center">
+              <img
+                class="w-full rounded"
+                src="https://i.pinimg.com/736x/84/6f/55/846f556cfaa5e17fddaf608c612db0ef.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="mt-[100px]">
+            <h3>
+              <a href="" class="text-[25px] font-serif text-red-700">
+                Wild Fawn x Mira Lou Collaborations
+              </a>
+            </h3>
+            <p class="mt-8 text-slate-500 font-normal leading-loose">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              magnam libero molestiae natus dolorum, nesciunt ab corrupti labore
+              iusto, sunt maxime minus est obcaecati aliquam provident at? Quo,
+              dolor autem.
+            </p>
+            <div
+              class="text-center border border-slate-400 w-24 mt-8 rounded py-[2px]"
+            >
+              <a href="" class=""> Explore </a>
+            </div>
+          </div>
+        </div>
+        <!-- categories -->
+        <div class="categories mt-[50px]">
+          <h3 class="text-[25px] font-light text-red-700 mb-8">categories</h3>
+          <!-- row one -->
+          <div class="grid grid-cols-4 gap-4">
+            <div class="p-8 rounded categories-item">
+              <div class="p-4 rounded item-boder">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/736x/cd/e1/7b/cde17bea0230937356bea6512e02eb7e.jpg"
+                  alt=""
+                />
+                <div class="mt-4 flex justify-between">
+                  <span class="text-red-700"> <a href=""> Necklaces </a> </span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 rounded categories-item">
+              <div class="p-4 rounded item-boder">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/564x/46/4b/00/464b00b5c90c05ca2638cc9bfab4122c.jpg"
+                  alt=""
+                />
+                <div class="mt-4 flex justify-between">
+                  <span class="text-red-700"> <a href=""> Necklaces </a> </span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 rounded categories-item">
+              <div class="p-4 rounded item-boder">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/736x/64/b5/d9/64b5d994b8a08e0dd0de41af724ba1e3.jpg"
+                  alt=""
+                />
+                <div class="mt-4 flex justify-between">
+                  <span class="text-red-700"> <a href=""> Necklaces </a> </span>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-8 rounded bg-red-800">
+              <div class="p-4 rounded item-boder">
+                <img
+                  class="w-full rounded"
+                  src="https://i.pinimg.com/564x/91/21/da/9121da97abb65eb13ffa137cd786e770.jpg"
+                  alt=""
+                />
+                <div class="mt-4 flex justify-between">
+                  <span class="text-white"> <a href=""> Necklaces </a> </span>
+                  <i class="fas fa-long-arrow-alt-right text-white"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- post -->
+        <div class="grid grid-cols-2 mt-[80px] gap-[80px]">
+          <div class="mt-[100px]">
+            <h3>
+              <a href="" class="text-[25px] font-serif text-red-700">
+                About us
+              </a>
+            </h3>
+            <p class="mt-8 text-slate-500 font-normal leading-loose">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              magnam libero molestiae natus dolorum, nesciunt ab corrupti labore
+              iusto, sunt maxime minus est obcaecati aliquam provident at? Quo,
+              dolor autem. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Vitae magnam libero molestiae natus dolorum, nesciunt ab
+              corrupti labore iusto, sunt maxime minus est obcaecati aliquam
+              provident at? Quo, dolor autem.
+            </p>
+            <div
+              class="text-center border border-slate-400 w-24 mt-8 rounded py-[2px]"
+            >
+              <a href="" class=""> More </a>
+            </div>
+          </div>
+          <div class="">
+            <a href="#" class="justify-center">
+              <img
+                class="w-full rounded"
+                src="https://i.pinimg.com/564x/c7/b6/45/c7b64582c77d293a5f3786091c399cfe.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="max-w-7xl mx-auto px-4 mt-[100px]">
+        <div class="grid grid-cols-4 gap-4">
+          <div class="">
+            <h4 class="my-2 font-sans text-[15px] font-semibold">
+              <a href=""> jewellery</a>
+            </h4>
+            <ul class="">
+              <li class="py-[10px] text-[14px]"><a href=""> Rings</a></li>
+              <li class="py-[10px] text-[14px]"><a href=""> Earrings</a></li>
+              <li class="py-[10px] text-[14px]"><a href=""> Necklaces</a></li>
+              <li class="py-[10px] text-[14px]"><a href=""> Bracelets</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <h4 class="my-2 font-sans text-[15px] font-semibold">
+              <a href=""> jewellery</a>
+            </h4>
+            <ul class="">
+              <li class="py-[10px] text-[14px]"><a href=""> Rings</a></li>
+              <li class="py-[10px] text-[14px]"><a href=""> Earrings</a></li>
+              <li class="py-[10px] text-[14px]"><a href=""> Necklaces</a></li>
+              <li class="py-[10px] text-[14px]"><a href=""> Bracelets</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <div class="">
+              <h4 class="my-2 font-sans text-[15px] font-semibold">
+                <a href=""> Contact Us</a>
+              </h4>
+              <p class="font-light text-[13px]">hanhbhph15007@fpt.edu.vn</p>
+            </div>
+            <div class="py-[30px]">
+              <h4 class="my-2 font-sans text-[15px] font-semibold">
+                <a href=""> Follow Us</a>
+              </h4>
+              <div class="pr-[15px] text-xl">
+                <a href="">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-youtube-square"></i>
+                </a>
+                <a href="">
+                  <i class="fab fa-pinterest-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <h4 class="my-2 font-sans text-[15px] font-semibold">
+              <a href=""> sign up for uor newsletter and get a 10% discount</a>
+            </h4>
+            <form action="" class="flex">
+              <div class="pr-4">
+                <label class="">
+                  <span
+                    class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-[13px]"
+                  >
+                    Your Email
+                  </span>
+                  <input
+                    type="email"
+                    name="email"
+                    class="mt-1 px-3 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-40 rounded-md sm:text-sm focus:ring-1"
+                    placeholder="you@example.com"
+                  />
+                </label>
+              </div>
+              <div class="">
+                <label class="">
+                  <span
+                    class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-[13px]"
+                  >
+                    Submit
+                  </span>
+                  <input
+                    type="submit"
+                    name="email"
+                    class="mt-1 px-3 py-1 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-24 rounded-md sm:text-sm focus:ring-1"
+                    placeholder="you@example.com"
+                  />
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+    </div>
+
     <div id="app"></div>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
