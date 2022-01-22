@@ -5,6 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Hind+Siliguri:wght@500&family=PT+Sans+Narrow:wght@700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -13,183 +15,170 @@
   </head>
   <body>
     <div class="">
-      <header class="relative bg-white">
-        <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="border-b border-gray-200">
-            <div class="h-16 flex items-center">
-              <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
-              <button
-                type="button"
-                class="bg-white p-2 rounded-md text-gray-400 lg:hidden"
-              >
-                <span class="sr-only">Open menu</span>
-                <!-- Heroicon name: outline/menu -->
-                <svg
-                  class="h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-
-              <!-- Logo -->
-              <div class="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span class="sr-only">Workflow</span>
-                  <img
-                    class="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
-                </a>
-              </div>
-
-              <!-- Flyout menus -->
-              <div class="hidden lg:ml-8 lg:block lg:self-stretch">
-                <div class="h-full flex space-x-8">
-                  <div class="flex">
-                    <div class="relative flex">
-                      <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
-                      <button
-                        type="button"
-                        class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
-                        aria-expanded="false"
-                      >
-                        Women
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="flex">
-                    <div class="relative flex">
-                      <button
-                        type="button"
-                        class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
-                        aria-expanded="false"
-                      >
-                        Men
-                      </button>
-                    </div>
-
-                    <div
-                      class="absolute top-full inset-x-0 text-sm text-gray-500"
-                    >
-                      <div
-                        class="absolute inset-0 top-1/2 bg-white shadow"
-                        aria-hidden="true"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <a
-                    href="#"
-                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >Company</a
-                  >
-
-                  <a
-                    href="#"
-                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >Stores</a
-                  >
+        <header class="header shadow-md">
+            <div class="header-inner">
+                <div class="w-[10%]" >
+                    <a href="">
+                        <img  src="https://www.freepnglogos.com/uploads/vogue-png-logo/vogue-paris-png-logo-11.png" alt="">
+                    </a>
                 </div>
-              </div>
-
-              <div class="ml-auto flex items-center">
-                <div
-                  class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6"
-                >
-                  <a
-                    href="#"
-                    class="text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >Sign in</a
-                  >
-                  <span class="h-6 w-px bg-gray-200" aria-hidden="true"></span>
-                  <a
-                    href="#"
-                    class="text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >Create account</a
-                  >
-                </div>
-
-                <div class="hidden lg:ml-8 lg:flex">
-                  <a
-                    href="#"
-                    class="text-gray-700 hover:text-gray-800 flex items-center"
-                  >
-                    <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
-                      alt=""
-                      class="w-5 h-auto block flex-shrink-0"
-                    />
-                    <span class="ml-3 block text-sm font-medium"> CAD </span>
-                    <span class="sr-only">, change currency</span>
-                  </a>
-                </div>
-
-                <!-- Search -->
-                <div class="flex lg:ml-6">
-                  <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
-                    <span class="sr-only">Search</span>
-                    <!-- Heroicon name: outline/search -->
-                    <svg
-                      class="w-6 h-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </a>
-                </div>
-
-                <!-- Cart -->
-                <div class="ml-4 flow-root lg:ml-6">
-                  <a href="#" class="group -m-2 p-2 flex items-center">
-                    <!-- Heroicon name: outline/shopping-bag -->
-                    <svg
-                      class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-                      />
-                    </svg>
-                    <span
-                      class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800"
-                      >0</span
-                    >
-                    <span class="sr-only">items in cart, view bag</span>
-                  </a>
-                </div>
-              </div>
+               
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href=""> Women</a>
+                            <!-- hover menu  -->
+                            <div class="menu-child">
+                               <div class="menu-child-flex max-w-7xl mx-auto px-4 ">
+                                <div class="menu-child-item grid grid-cols-4">
+                                    <div class="">
+                                        <h4 class="mb-4">
+                                            Necklaces
+                                        </h4>
+                                        <ul class="menu-child-list">
+                                            <li><a href="">Tops</a></li>
+                                            <li><a href="">Dresses</a></li>
+                                            <li><a href="">Silk</a></li>
+                                            <li><a href="">Pants</a></li>
+                                            <li><a href="">Denim</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="mb-4">
+                                            Earrings
+                                        </h4>
+                                        <ul class="menu-child-list">
+                                            <li><a href="">Tops</a></li>
+                                            <li><a href="">Dresses</a></li>
+                                            <li><a href="">Silk</a></li>
+                                            <li><a href="">Pants</a></li>
+                                            <li><a href="">Denim</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="mb-4">
+                                            Earrings
+                                        </h4>
+                                        <ul class="menu-child-list">
+                                            <li><a href="">Tops</a></li>
+                                            <li><a href="">Dresses</a></li>
+                                            <li><a href="">Silk</a></li>
+                                            <li><a href="">Pants</a></li>
+                                            <li><a href="">Denim</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="">
+                                        <h4 class="mb-4">
+                                            Necklaces
+                                        </h4>
+                                        <ul class="menu-child-list">
+                                            <li><a href="">Tops</a></li>
+                                            <li><a href="">Dresses</a></li>
+                                            <li><a href="">Silk</a></li>
+                                            <li><a href="">Pants</a></li>
+                                            <li><a href="">Denim</a></li>
+                                        </ul>
+                                    </div>
+                                  
+                                </div>
+                                <div class="menu-child-item">
+                                   <div class=" grid grid-cols-2 gap-6">
+                                       <div class="w-[80%] ">
+                                           <a href="">
+                                               <img  class="rounded" src="https://i.pinimg.com/564x/5f/4c/7d/5f4c7d607739003b710d647c79c0b095.jpg" alt="">
+                                           </a>
+                                       </div>
+                                       <div class="w-[80%]">
+                                        <a href="">
+                                            <img class="rounded"  src="https://i.pinimg.com/564x/eb/fc/74/ebfc74489aed6e4a13f63647ab9375f6.jpg" alt="">
+                                        </a>
+                                    </div>
+                                   </div>
+                                </div>
+                               </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="">Men</a>
+                            <div class="menu-child">
+                                <div class="menu-child-flex max-w-7xl mx-auto px-4 ">
+                                 <div class="menu-child-item grid grid-cols-4">
+                                     <div class="">
+                                         <h4 class="mb-4">
+                                             Necklaces
+                                         </h4>
+                                         <ul class="menu-child-list">
+                                             <li><a href="">Tops</a></li>
+                                             <li><a href="">Dresses</a></li>
+                                             <li><a href="">Silk</a></li>
+                                             <li><a href="">Pants</a></li>
+                                             <li><a href="">Denim</a></li>
+                                         </ul>
+                                     </div>
+                                     <div class="">
+                                         <h4 class="mb-4">
+                                             Earrings
+                                         </h4>
+                                         <ul class="menu-child-list">
+                                             <li><a href="">Tops</a></li>
+                                             <li><a href="">Dresses</a></li>
+                                             <li><a href="">Silk</a></li>
+                                             <li><a href="">Pants</a></li>
+                                             <li><a href="">Denim</a></li>
+                                         </ul>
+                                     </div>
+                                     <div class="">
+                                         <h4 class="mb-4">
+                                             Earrings
+                                         </h4>
+                                         <ul class="menu-child-list">
+                                             <li><a href="">Tops</a></li>
+                                             <li><a href="">Dresses</a></li>
+                                             <li><a href="">Silk</a></li>
+                                             <li><a href="">Pants</a></li>
+                                             <li><a href="">Denim</a></li>
+                                         </ul>
+                                     </div>
+                                     <div class="">
+                                         <h4 class="mb-4">
+                                             Necklaces
+                                         </h4>
+                                         <ul class="menu-child-list">
+                                             <li><a href="">Tops</a></li>
+                                             <li><a href="">Dresses</a></li>
+                                             <li><a href="">Silk</a></li>
+                                             <li><a href="">Pants</a></li>
+                                             <li><a href="">Denim</a></li>
+                                         </ul>
+                                     </div>
+                                   
+                                 </div>
+                                 <div class="menu-child-item">
+                                    <div class=" grid grid-cols-2 gap-6">
+                                        <div class="w-[80%] ">
+                                            <a href="">
+                                                <img  class="rounded" src="https://i.pinimg.com/564x/ce/58/af/ce58af8c20196674bff5fafe38a07595.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="w-[80%]">
+                                         <a href="">
+                                             <img class="rounded"  src="https://i.pinimg.com/564x/bb/4c/4d/bb4c4d86ef9176c840c77518e7b508c3.jpg" alt="">
+                                         </a>
+                                     </div>
+                                    </div>
+                                 </div>
+                                </div>
+                             </div>
+                        
+                        </li>
+                        <li class="menu-item"><a href="">Stores</a></li>
+                        <li class="menu-item"><a href="">Sign in</a></li>
+                        <li class="menu-item"><a href="">Create account</a></li>
+                        <li class="menu-item text-slate-600"><a href=""><i class="fas fa-search"></i></a></li>
+                        <li class="menu-item text-slate-600"><a href=""><i class="fas fa-shopping-bag"></i></a></li>
+                    </ul>
+             
             </div>
-          </div>
-        </nav>
-      </header>
+        </header>
       <div class="banner">
         <img
           class="w-full"
@@ -373,7 +362,13 @@
           </div>
         </div>
       </main>
-
+      <div class="banner mt-[80px]">
+        <img
+          class="w-full"
+          src="http://www.bijouterielamsa.com/web/img/slider/ban2.jpg"
+          alt=""
+        />
+      </div>
       <footer class="max-w-7xl mx-auto px-4 mt-[100px]">
         <div class="grid grid-cols-4 gap-4">
           <div class="">

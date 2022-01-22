@@ -3,13 +3,67 @@
 @tailwind utilities;
 
 
+/* header */
 
+.header{
+    position: fixed;
+    background-color: #fff;
+   top: 0;
+   left: 0;
+   right: 0;
+    /* border-bottom: 1px solid #ccc; */
+}
+.header-inner{
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+   
+}
+.menu{
+    display: flex;
+    align-items: center;
 
+}
+.menu-item{
+    margin: 0 1rem;
+    
+}
+.menu-item:hover .menu-child{
+    opacity: 1;
+    visibility: visible;
+}
+.menu-child{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s linear;
+    border-bottom: 1px solid #ccc;
+    
+}
 
+.menu-child-flex{
+    display: flex;
+}
+.menu-child-item{
+    width: 50%;
+    padding: 1rem;
 
+}
+.menu-child-list li{
+    color: rgb(71, 71, 71);
+}
+.menu-item a{
 
-
-
+    
+}
 /* categories */
 .categories-item{
     background-color: #E5E5E3;
@@ -18,3 +72,4 @@
 .item-boder{
     border: 1px solid #ccc;
 }
+
