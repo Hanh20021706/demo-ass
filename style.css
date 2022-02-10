@@ -8,9 +8,9 @@
 .header{
     position: fixed;
     background-color: #fff;
-   top: 0;
-   left: 0;
-   right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     /* border-bottom: 1px solid #ccc; */
 }
 .header-inner{
@@ -64,6 +64,13 @@
 
     
 }
+/* Our favorites */
+
+.link-post:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.25s linear;}
+
 /* categories */
 .categories-item{
     background-color: #E5E5E3;
@@ -72,4 +79,8 @@
 .item-boder{
     border: 1px solid #ccc;
 }
+
+
+/* responsive */
+
 
