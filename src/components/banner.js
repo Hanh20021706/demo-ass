@@ -4,7 +4,7 @@ const Banner = {
         <div class="banner">
         <img
           class="w-full"
-          src="http://www.alexosbornejewellery.co.uk/wp-content/uploads/2012/12/jewellery-set-slider.jpg"
+          src="https://www.way.com.vn/vnt_upload/File/Image/Thuong_HieuTrang_Suc_Harry_Winston.png"
           alt=""
         />
       </div>

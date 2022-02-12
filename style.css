@@ -4,7 +4,11 @@
 
 
 /* header */
-
+img{
+    border-radius: 3px;
+    max-width: 100%;
+    max-height: 100%;
+}
 .header{
     position: fixed;
     background-color: #fff;
@@ -14,12 +18,12 @@
     /* border-bottom: 1px solid #ccc; */
 }
 .header-inner{
-    max-width: 1240px;
+    /* max-width: 1240px; */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
    
 }
 .menu{
@@ -69,7 +73,8 @@
 .link-post:hover{
     background-color: #000;
     color: #fff;
-    transition: 0.25s linear;}
+    transition: 0.25s linear;
+}
 
 /* categories */
 .categories-item{
@@ -81,6 +86,108 @@
 }
 
 
+
+/* page posts */
+.main-post{
+    margin-top: 100px;
+}
+.header-main{
+    text-align: center;
+}
+.title-posts{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.header-main p{
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+.body-posts{
+    margin-top: 100px;
+}
+.item-post{
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 3px;
+}
+.item-post h4{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin: 15px 0px;
+    text-align: left;
+}
+.item-post p {
+    text-align: left;
+    color: #736C6C;
+}
+.btn-post{
+    border: 1px solid #ccc;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.btn-post:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.25s linear;
+}
+.footer-posts{
+    margin-top: 50px;
+    text-align: center;
+}
+.btn-footer{
+    border: 1px solid #ccc;
+    padding: 5px 30px;
+    
+}
+.btn-footer:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.25s linear;
+}
+
+
+/* products */
+.products-main{
+    margin-top: 150px;
+}
+.header-product{
+    text-align: center;
+}
+.header-product h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.header-product p {
+    width: 50%;
+    margin: auto;
+    font-family: 'Cormorant Garamond', serif;
+    
+}
+.filter-products{
+    margin-top: 100px;
+}
+.filter-menu{
+    width: 100%;
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px 0px;
+}
+.filter-menu li{
+    padding: 0px 30px;
+    
+}
+.menu-item-filter{
+    border-left: 1px solid #ccc;
+    
+}
+.product-item{
+    margin-top: 50px;
+}
 /* responsive */
 
 
