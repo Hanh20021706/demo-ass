@@ -14,7 +14,7 @@ const Header = {
 
           <ul class="menu">
             <li class="menu-item">
-              <a href=""> Women</a>
+              <a href="/products"> Women</a>
               <!-- hover menu  -->
               <div class="menu-child">
                 <div class="menu-child-flex max-w-7xl mx-auto px-4">
@@ -156,7 +156,7 @@ const Header = {
                 </div>
               </div>
             </li>
-            <li class="menu-item"><a href="">News</a></li>
+            <li class="menu-item"><a href="/posts">News</a></li>
             <li class="menu-item"><a href="">Stores</a></li>
             <li class="menu-item"><a href="">Sign in</a></li>
             <li class="menu-item"><a href="">create account</a></li>
