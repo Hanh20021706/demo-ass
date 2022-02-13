@@ -1,7 +1,9 @@
 import Navigo from "navigo";
 import postsPage from "./pages/posts";
 import productsPage from "./pages/products";
+import signIn from "./pages/signin";
 import HomePage from "./pages/home";
+import signUp from "./pages/signup";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -20,10 +22,10 @@ router.on({
         print(productsPage);
     },
     "/signin": () => {
-        print();
+        print(signIn);
     },
     "/singup": () => {
-        print();
+        print(signUp);
     },
     "/stores": () => {
         print();

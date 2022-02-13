@@ -188,6 +188,64 @@ img{
 .product-item{
     margin-top: 50px;
 }
+
+
+/* signin */
+.header-signin {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   height: 56px;
+}
+.main-signin {
+    margin-top: 50px;
+}
+.title-signin{
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    font-size: 40px;
+}
+.main-signin p{
+    text-align: center;
+    font-family: 'Kaisei Decol', serif;
+
+}
+.form-signin{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.inp-item{
+    margin-bottom: 15px;
+}
+.label-name{
+    display: flex;
+}
+.inp-email, .inp-pass{
+    border: 1px solid #000;
+    width: 300px;
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+.inp-email, .inp-pass::placeholder{
+    font-size: 13px;
+}
+.inp-email, .inp-pass:focus{
+    outline: none;
+}
+.btn-next{
+   
+    padding: 5px 0px;
+    margin-top: 10px;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+}
+.btn-next:hover{
+    background-color: #a60505;
+    transition: 0.25s linear;
+}
 /* responsive */
 
 

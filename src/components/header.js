@@ -158,8 +158,8 @@ const Header = {
             </li>
             <li class="menu-item"><a href="/posts">News</a></li>
             <li class="menu-item"><a href="">Stores</a></li>
-            <li class="menu-item"><a href="">Sign in</a></li>
-            <li class="menu-item"><a href="">create account</a></li>
+            <li class="menu-item"><a href="/signin">Sign in</a></li>
+            <li class="menu-item"><a href="/singup">create account</a></li>
             <li class="menu-item text-slate-600">
               <a href=""><i class="fas fa-search"></i></a>
             </li>
