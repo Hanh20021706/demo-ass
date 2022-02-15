@@ -1,6 +1,6 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
-import productsMain from "../components/productsMain";
+import Footer from "../../components/footer";
+import Header from "../../components/header";
+import productsMain from "../../components/productsMain";
 
 const productsPage = {
     render() {

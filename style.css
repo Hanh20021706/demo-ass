@@ -246,6 +246,75 @@ img{
     background-color: #a60505;
     transition: 0.25s linear;
 }
+
+
+/* detail products */
+.body-main{
+    margin-top: 100px;
+}
+.img-sub{
+    margin-top: 10px;
+}
+.img-sub-item{
+    width: 100%;
+}
+.intro-product{
+    
+}
+.title-intro h2{
+    font-family: 'Kaisei Decol', serif;
+    font-size: 28px;
+}
+.title-intro p{
+    font-size: 13px;
+    color: #736C6C;
+    margin-bottom: 10px;
+}
+.price-product{
+    font-family: 'Dosis', sans-serif;
+    
+
+}
+.btn-detail{
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+.btn-item{
+    width: 100%;
+    
+}
+.btn-now{
+    background-color: #ccc;
+    width: 100%;
+    padding: 5px 0px;
+    color: #736C6C;
+}
+.btn-now:hover{
+    background-color: #a60505;
+    color: #fff;
+    transition: 0.25s linear;
+}
+.btn-add-card{
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+}
+.desc-product{
+    margin-top: 30px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.desc-product{
+    text-align: left;
+    font-size: 13px;
+}
+.list-desc{
+    padding: 10px 30px;
+}
+.list-desc li{
+    list-style: outside;
+}
 /* responsive */
 
 
