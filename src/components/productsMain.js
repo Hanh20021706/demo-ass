@@ -1,5 +1,9 @@
+import { getAll } from "../api/products";
+
 const productsMain = {
-    render() {
+    async render() {
+        const { data } = await getAll();
+
         return /* html */`
         <main>
         <div class="products-main">
@@ -26,62 +30,25 @@ const productsMain = {
             </ul>
           </div>
           <div class="product-item grid grid-cols-4 gap-6">
+          ${data.map((products) => `
             <div class="">
-              <a href="">
-                <img
-                  class="w-full rounded"
-                  src="https://i.pinimg.com/564x/3b/93/6b/3b936b1acfb5ae2300f845775dc00016.jpg"
-                  alt=""
-                />
-              </a>
+            <a href="">
+              <img
+                class="w-full rounded"
+                src="${products.img}"
+                alt=""
+              />
+            </a>
 
-              <h4 class="mt-6 mb-2 text-red-700">
-                <a href=""> Long Twist Earrings</a>
-              </h4>
-              <span class="text-slate-500"> $49.98 </span>
-            </div>
-            <div class="">
-                <a href="">
-                  <img
-                    class="w-full rounded"
-                    src="https://i.pinimg.com/564x/b1/db/b9/b1dbb9c31729d12fafe4e7a1ef424f29.jpg"
-                    alt=""
-                  />
-                </a>
-  
-                <h4 class="mt-6 mb-2 text-red-700">
-                  <a href=""> Long Twist Earrings</a>
-                </h4>
-                <span class="text-slate-500"> $49.98 </span>
-              </div>
-              <div class="">
-                <a href="">
-                  <img
-                    class="w-full rounded"
-                    src="https://i.pinimg.com/originals/bf/55/fd/bf55fdc03cd8e27eca59cd0b6ad15b4d.gif"
-                    alt=""
-                  />
-                </a>
-  
-                <h4 class="mt-6 mb-2 text-red-700">
-                  <a href=""> Long Twist Earrings</a>
-                </h4>
-                <span class="text-slate-500"> $49.98 </span>
-              </div>
-              <div class="">
-                <a href="">
-                  <img
-                    class="w-full rounded"
-                    src="https://i.pinimg.com/564x/dd/dd/e1/dddde1b53e3522fcf845ba6b76ef6c24.jpg"
-                    alt=""
-                  />
-                </a>
-  
-                <h4 class="mt-6 mb-2 text-red-700">
-                  <a href=""> Long Twist Earrings</a>
-                </h4>
-                <span class="text-slate-500"> $49.98 </span>
-              </div>
+            <h4 class="mt-6 mb-2 text-red-700">
+              <a href=""> ${products.name}</a>
+            </h4>
+            <span class="text-slate-500"> $ ${products.price}</span>
+          </div>
+            `).join("")}
+           
+          
+              
           </div>
         </div>
         <div class="footer-posts">

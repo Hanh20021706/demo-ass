@@ -4,11 +4,17 @@ import signIn from "./pages/signin";
 import HomePage from "./pages/home";
 import signUp from "./pages/signup";
 import productsPage from "./pages/products/products";
+import Dashboard from "./pages/admin/dashboard";
+import addProduct from "./pages/admin/products/add";
+import listProduct from "./pages/admin/products";
+import Detail from "./pages/products/detail";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
-const print = (content) => {
-    document.querySelector("#app").innerHTML = content.render();
+const print = async (content, id) => {
+    // content trả về cho chúng ta 1 object(render và afterRender)
+    document.querySelector("#app").innerHTML = await content.render(id);
+    if (content.afterRender) await content.afterRender(id);
 };
 
 router.on({
@@ -27,8 +33,17 @@ router.on({
     "/singup": () => {
         print(signUp);
     },
-    "/stores": () => {
-        print();
+    "/admin/dashboard": () => {
+        print(Dashboard);
+    },
+    "/product/detail/:id": ({ data }) => {
+        print(Detail, data.id);
+    },
+    "/product/add": () => {
+        print(addProduct);
+    },
+    "/admin/list/product": () => {
+        print(listProduct);
     },
 });
 router.resolve();

@@ -1,4 +1,4 @@
-const detail = {
+const Detail = {
     render() {
         return /* html */`
         <div class="">
@@ -334,4 +334,4 @@ const detail = {
         `;
     },
 };
-export default detail;
+export default Detail;

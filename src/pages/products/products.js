@@ -3,11 +3,11 @@ import Header from "../../components/header";
 import productsMain from "../../components/productsMain";
 
 const productsPage = {
-    render() {
+    async render() {
         return /* html */`
         <div>
             ${Header.render()}
-            ${productsMain.render()}
+            ${await productsMain.render()}
             ${Footer.render()}
         </div>
         `;

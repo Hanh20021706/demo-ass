@@ -1,0 +1,52 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "women"
+    },
+    {
+      "id": 2,
+      "name": "men"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "nhẫn",
+      "price": 2000,
+      "img": "https://i.pinimg.com/564x/65/e3/ad/65e3adf208f34a2526da042dbca6fe5b.jpg",
+      "desc": "hfadgfhgdshf",
+      "cateId": 2
+    },
+    {
+      "id": 2,
+      "name": "nhẫn",
+      "price": 2000,
+      "img": "https://i.pinimg.com/564x/65/e3/ad/65e3adf208f34a2526da042dbca6fe5b.jpg",
+      "desc": "hfadgfhgdshf",
+      "cateId": 2
+    },
+    {
+      "id": 3,
+      "name": "nhẫn",
+      "price": 2000,
+      "img": "https://i.pinimg.com/564x/65/e3/ad/65e3adf208f34a2526da042dbca6fe5b.jpg",
+      "desc": "hfadgfhgdshf",
+      "cateId": 1
+    },
+    {
+      "name": "hgfhdsdhsfb",
+      "price": "343543",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645021010/ass/ihg6lrtdpkycsjx0jfkw.jpg",
+      "desc": "fnhwcbthubvth",
+      "id": 4
+    },
+    {
+      "name": "fuhwrhfwhwbf",
+      "price": "435435",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645021611/ass/gpxhsr1z4kx4bed3saqk.jpg",
+      "desc": "njvwhbvhjwbfhewbfewhfe",
+      "id": 5
+    }
+  ]
+}
