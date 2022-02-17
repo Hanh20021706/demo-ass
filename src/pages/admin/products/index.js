@@ -1,5 +1,7 @@
-import { getAll } from "../../../api/products";
+import toastr from "toastr";
+import { getAll, remove } from "../../../api/products";
 import AdminNav from "../../../components/adminNav";
+import { reRender } from "../../../utils";
 
 const listProduct = {
     async render() {
@@ -96,7 +98,7 @@ const listProduct = {
                     ${product.desc}
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <a href="/admin/edit/${product.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                    <a href="/product/edit${product.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <button type="button" data-id=${product.id} class=" btn btn-remove text-rose-600">
@@ -118,6 +120,26 @@ const listProduct = {
           </div>
 
         `;
+    },
+    afterRender() {
+        // lay danh sach button sau khi render
+        const buttons = document.querySelectorAll(".btn");
+        // tao vong lap cho nodelist
+        buttons.forEach((btn) => {
+            // lay id tu thuoc tinh data-id cua button
+            const { id } = btn.dataset;
+            btn.addEventListener("click", () => {
+                const confirm = window.confirm("are you sure ?");
+                if (confirm) {
+                    // goio ham delete trong folder api va ban id vao ham
+                    remove(id).then(() => {
+                        toastr.success("you delete!");
+                    }).then(() => {
+                        reRender(listProduct, "#app");
+                    });
+                }
+            });
+        });
     },
 };
 export default listProduct;

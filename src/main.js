@@ -8,6 +8,7 @@ import Dashboard from "./pages/admin/dashboard";
 import addProduct from "./pages/admin/products/add";
 import listProduct from "./pages/admin/products";
 import Detail from "./pages/products/detail";
+import editProduct from "./pages/admin/products/edit";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -41,6 +42,9 @@ router.on({
     },
     "/product/add": () => {
         print(addProduct);
+    },
+    "/product/edit:id": ({ data }) => {
+        print(editProduct, data.id);
     },
     "/admin/list/product": () => {
         print(listProduct);

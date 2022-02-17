@@ -1,8 +1,8 @@
 import axios from "axios";
-// import listProduct from ".";
+import listProduct from ".";
 import { add } from "../../../api/products";
 import AdminNav from "../../../components/adminNav";
-// import { reRender } from "../../../utils";
+import { reRender } from "../../../utils";
 
 const addProduct = {
     async render() {
@@ -115,8 +115,8 @@ const addProduct = {
                 desc: document.querySelector("#desc-product").value,
 
             });
-            // window.location.href = "/admin/list/product";
-            // reRender(listProduct, "#app");
+            window.location.href = "/admin/list/product";
+            reRender(listProduct, "#app");
         });
     },
 };
