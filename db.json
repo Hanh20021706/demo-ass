@@ -11,18 +11,63 @@
   ],
   "products": [
     {
-      "id": 6,
       "name": "Long Twist Earrings",
-      "price": "89547358",
-      "img": "",
-      "desc": "đẹp rạng ngời"
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "5600",
+      "quantity": "78",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170613/ass/tr7ucpf2tcakka77r0rv.jpg",
+      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "id": 1
     },
     {
-      "id": 7,
-      "name": "Long Twist Earrings abc",
-      "price": "3450000",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645099895/ass/zfzflejossh8wsb7pc2z.jpg",
-      "desc": "fdsfdsfdsfds"
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "56000",
+      "quantity": "56",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170641/ass/juu5a7qicre5e8ttuix4.jpg",
+      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "id": 2
+    },
+    {
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "34000",
+      "quantity": "55",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170661/ass/joiqpzgmwvcpj5wqdghg.jpg",
+      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "id": 3
+    },
+    {
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "2300",
+      "quantity": "44",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170680/ass/mkgvuyfhhotbk4fe55h2.jpg",
+      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "id": 4
+    },
+    {
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "3400",
+      "quantity": "87",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170704/ass/aoxzhmajbo0jzvahv70y.jpg",
+      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$P4kuDjnMe1sH.OK8RLi4UebA1c72AjQUFGqmLl/n5r7An.gfVQzFC",
+      "username": "admin",
+      "id": 1
+    },
+    {
+      "email": "hanh@gmail.com",
+      "password": "$2a$10$9h8zN6BJWOgFnWTLgRF3B.rGTq8wrxWf.CN.CTJwhO7Srqt78uw6q",
+      "username": "hanh",
+      "id": 2
     }
   ]
 }

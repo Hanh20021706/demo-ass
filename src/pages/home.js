@@ -7,7 +7,7 @@ const HomePage = {
     render() {
         return /* html */`
             <div> 
-            ${Header.render()}
+            <div id="header">  ${Header.render()} </div>
             ${Banner.render()}
             <main>
             ${Main.render()}
@@ -15,6 +15,9 @@ const HomePage = {
             ${Footer.render()}
             </div>
         `;
+    },
+    afterRender() {
+        Header.afterRender();
     },
 };
 export default HomePage;

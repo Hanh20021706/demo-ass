@@ -17,7 +17,16 @@ const print = async (content, id) => {
     document.querySelector("#app").innerHTML = await content.render(id);
     if (content.afterRender) await content.afterRender(id);
 };
-
+router.on("/admin/*", () => {}, {
+    before: (done) => {
+        const userId = JSON.parse(localStorage.getItem("user")).id;
+        if (userId === 1) {
+            done();
+        } else {
+            document.location.href = "/";
+        }
+    },
+});
 router.on({
     "/": () => {
         print(HomePage);
@@ -31,7 +40,7 @@ router.on({
     "/signin": () => {
         print(signIn);
     },
-    "/singup": () => {
+    "/signup": () => {
         print(signUp);
     },
     "/admin/dashboard": () => {

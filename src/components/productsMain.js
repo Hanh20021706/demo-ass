@@ -32,10 +32,10 @@ const productsMain = {
           <div class="product-item grid grid-cols-4 gap-6">
           ${data.map((products) => `
             <div class="">
-            <a href="">
-              <img
+            <a href="/#/product/detail/${products.id}">
+              <img 
                 class="w-full rounded"
-                src="${products.img}"
+                 src="${products.img}"
                 alt=""
               />
             </a>

@@ -6,11 +6,15 @@ const productsPage = {
     async render() {
         return /* html */`
         <div>
-            ${Header.render()}
+            <div id="header">  ${Header.render()} </div>
+           
             ${await productsMain.render()}
             ${Footer.render()}
         </div>
         `;
+    },
+    afterRender() {
+        Header.afterRender();
     },
 };
 export default productsPage;

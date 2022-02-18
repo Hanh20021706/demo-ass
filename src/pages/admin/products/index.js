@@ -2,6 +2,7 @@ import toastr from "toastr";
 import { getAll, remove } from "../../../api/products";
 import AdminNav from "../../../components/adminNav";
 import { reRender } from "../../../utils";
+import "toastr/build/toastr.min.css";
 
 const listProduct = {
     async render() {
@@ -25,7 +26,7 @@ const listProduct = {
        </div>
        </div>
        
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-[84rem] mx-auto">
         <div class="-my-0 sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -45,6 +46,12 @@ const listProduct = {
                     </th>
                     <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Price
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Quantity
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Color
                     </th>
                     <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                         categories 
@@ -87,6 +94,14 @@ const listProduct = {
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
                 <div class="text-sm text-gray-900">   ${product.price}</div>
+                
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">   ${product.quantity}</div>
+                
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">   ${product.color}</div>
                 
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">

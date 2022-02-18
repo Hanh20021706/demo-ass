@@ -42,6 +42,22 @@ const editProduct = {
                     <label class="block">
                       <span
                         class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                       Màu Sắc
+                      </span>
+                      <input
+                        id="color-product"
+                        type="text"
+                        name=""
+                        class="mt-1 px-8 py-2 w-full bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                        placeholder=""
+                        value = "${data.color}"
+                        />
+                    </label>
+                  </div>
+                    <div class="col-span-3 sm:col-span-2">
+                    <label class="block">
+                      <span
+                        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
                         Giá Sản Phẩm
                       </span>
                       <input
@@ -53,7 +69,22 @@ const editProduct = {
                         value = "${data.price}"/>
                     </label>
                   </div>
-                  
+                  <div class="col-span-3 sm:col-span-2">
+                  <label class="block">
+                    <span
+                      class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                     Số Lượng
+                    </span>
+                    <input
+                      id="quantity-product"
+                      type="number"
+                      name=""
+                      class="mt-1 px-8 py-2 w-full bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
+                      placeholder=""
+                      value = "${data.quantity}"
+                      />
+                  </label>
+                </div>
           
                   </div>
                   <div>
@@ -99,13 +130,19 @@ const editProduct = {
     afterRender(id) {
         const formEdit = document.querySelector("#form-edit-product");
         const productImg = document.querySelector("#product-img");
+        const imgProduct = document.querySelector("#img-product");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dkpulhfe7/image/upload";
         const CLOUDINARY_PRESET = "votxzxvk";
         let productImageLink = "";
 
+        // handle sự kiện change để xem ảnh trên local
+        imgProduct.addEventListener("change", (e) => {
+            productImg.src = URL.createObjectURL(e.target.files[0]);
+        });
+
         formEdit.addEventListener("submit", async (e) => {
             e.preventDefault();
-            const file = document.querySelector("#img-product").files[0];
+            const file = imgProduct.files[0];
             if (file) {
                 const formData = new FormData();
                 formData.append("file", file);
@@ -116,14 +153,16 @@ const editProduct = {
                         "Content-Type": "application/form-data",
                     },
                 });
-                productImageLink = data;
+                productImageLink = data.url;
             }
 
             update({
                 id,
                 name: document.querySelector("#name-product").value,
+                color: document.querySelector("#color-product").value,
                 price: document.querySelector("#price-product").value,
-                img: productImageLink ? productImageLink.url : productImg.src,
+                quantity: document.querySelector("#quantity-product").value,
+                img: productImageLink || productImg.src,
                 desc: document.querySelector("#desc-product").value,
             });
             window.location.href = "/admin/list/product";

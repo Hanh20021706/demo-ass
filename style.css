@@ -314,7 +314,14 @@ img{
 }
 .list-desc li{
     list-style: outside;
+    
 }
 /* responsive */
 
-
+/* ========================================================== */
+.slec-cate:focus{
+    outline: none;
+}
+.option-cate{
+    border: none;
+}
