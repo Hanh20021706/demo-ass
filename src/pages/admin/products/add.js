@@ -1,11 +1,13 @@
 import axios from "axios";
 import listProduct from ".";
+import { getAll } from "../../../api/categories";
 import { add } from "../../../api/products";
 import AdminNav from "../../../components/adminNav";
 import { reRender } from "../../../utils";
 
 const addProduct = {
     async render() {
+        const { data } = await getAll();
         return /* html */`
         <div> ${AdminNav.render()} </div>
         <div class="max-w-5xl mx-auto">
@@ -34,6 +36,19 @@ const addProduct = {
                           placeholder=""/>
                       </label>
                     </div>
+                    <div class="col-span-3 sm:col-span-2">
+                    <label class="block">
+                      <span
+                        class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-gray-700">
+                        Danh Muc
+                      </span>
+                      <select name="" id="cate-product" class=" slec-cate w-full border px-8 py-2  shadow-sm border-gray-300 placeholder-gray-400 rounded-md  focus:border-sky-500 focus:ring-sky-500 block sm:text-sm focus:ring-1">
+                      ${data.map((item) => `
+                      <option value="${item.id}">${item.name}</option>
+                      `).join("")}
+                    </select>
+                    </label>
+                  </div>
                     <div class="col-span-3 sm:col-span-2">
                     <label class="block">
                       <span
@@ -140,6 +155,7 @@ const addProduct = {
                 color: document.querySelector("#color-product").value,
                 price: document.querySelector("#price-product").value,
                 quantity: document.querySelector("#quantity-product").value,
+                cateId: document.querySelector("#cate-product").value,
                 img: data.url,
                 desc: document.querySelector("#desc-product").value,
 

@@ -1,12 +1,12 @@
 import toastr from "toastr";
-import { getAll, remove } from "../../../api/products";
+import { getAllCate, remove } from "../../../api/products";
 import AdminNav from "../../../components/adminNav";
 import { reRender } from "../../../utils";
 import "toastr/build/toastr.min.css";
 
 const listProduct = {
     async render() {
-        const { data } = await getAll();
+        const { data } = await getAllCate();
         // console(data);
         return /* html */`
         <div> ${AdminNav.render()} </div>
@@ -39,7 +39,7 @@ const listProduct = {
                         id 
                     </th>
                     <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        title
+                        name
                     </th>
                     <th scope="col" class="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                         images 
@@ -105,13 +105,14 @@ const listProduct = {
                 
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">   ${product.title}</div>
+                <div class="text-sm text-gray-900">   ${product.categorie.name}</div>
+                
+                </td>
+                <td class="px-4 py-4 whitespace-nowrap">
+                <div class="text-sm text-gray-900">   ${product.desc}</div>
                 
                 </td>
             
-                <td class="px-4 py-4  text-sm text-gray-500">
-                    ${product.desc}
-                </td>
                 <td class="px-4 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <a href="/product/edit${product.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                 </td>
@@ -144,11 +145,11 @@ const listProduct = {
             // lay id tu thuoc tinh data-id cua button
             const { id } = btn.dataset;
             btn.addEventListener("click", () => {
-                const confirm = window.confirm("are you sure ?");
+                const confirm = window.confirm("bạn có chắc chắn muốn xóa?");
                 if (confirm) {
                     // goio ham delete trong folder api va ban id vao ham
                     remove(id).then(() => {
-                        toastr.success("you delete!");
+                        toastr.success("bạn đã xóa thành công!");
                     }).then(() => {
                         reRender(listProduct, "#app");
                     });

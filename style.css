@@ -325,3 +325,42 @@ img{
 .option-cate{
     border: none;
 }
+.quantity-product{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100px;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+.quantity-product:focus{
+    outline: none;
+    background-color: #fff;
+}
+
+/* ============================= */
+/* cart */
+.header-cart{
+    border-bottom: 1px solid #E5E5E3;
+}
+.nav-cart-haeder{
+    margin: 20px 0px;
+}
+.nav-cart-haeder li{
+    padding: 0px 15px;
+}
+.table-cart{
+    margin-top: 50px;
+    width: 100%;
+}
+.header-table{
+    padding: 10px 0px;
+    background-color: #000;
+}
+.header-table th{
+    padding: 10px 0px;
+    color: #fff;
+}
+.btn-plus,.btn-minus{
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+}

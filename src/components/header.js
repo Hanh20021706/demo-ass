@@ -24,7 +24,7 @@ const Header = {
                 <div class="menu-child-flex max-w-7xl mx-auto px-4">
                   <div class="menu-child-item grid grid-cols-4">
                     <div class="">
-                      <h4 class="mb-4">Necklaces</h4>
+                      <h4 class="mb-4">  <a href="">Earrings</a></h4>
                       <ul class="menu-child-list">
                         <li><a href="">Tops</a></li>
                         <li><a href="">Dresses</a></li>
@@ -34,7 +34,7 @@ const Header = {
                       </ul>
                     </div>
                     <div class="">
-                      <h4 class="mb-4">Earrings</h4>
+                    <h4 class="mb-4">  <a href="">Earrings</a></h4>
                       <ul class="menu-child-list">
                         <li><a href="">Tops</a></li>
                         <li><a href="">Dresses</a></li>
@@ -44,7 +44,7 @@ const Header = {
                       </ul>
                     </div>
                     <div class="">
-                      <h4 class="mb-4">Earrings</h4>
+                    <h4 class="mb-4">  <a href="">Earrings</a></h4>
                       <ul class="menu-child-list">
                         <li><a href="">Tops</a></li>
                         <li><a href="">Dresses</a></li>
@@ -54,7 +54,7 @@ const Header = {
                       </ul>
                     </div>
                     <div class="">
-                      <h4 class="mb-4">Necklaces</h4>
+                        <h4 class="mb-4">  <a href="">Earrings</a></h4>
                       <ul class="menu-child-list">
                         <li><a href="">Tops</a></li>
                         <li><a href="">Dresses</a></li>
@@ -98,7 +98,7 @@ const Header = {
               <a href=""><i class="fas fa-search"></i></a>
             </li>
             <li class="menu-item text-slate-600">
-              <a href=""><i class="fas fa-shopping-bag"></i></a>
+              <a href="/cart"><i class="fas fa-shopping-bag"></i></a>
             </li>
             <li class="menu-item">
             ${localStorage.getItem("user") ? ` <ul class="flex">

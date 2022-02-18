@@ -9,6 +9,10 @@ import addProduct from "./pages/admin/products/add";
 import listProduct from "./pages/admin/products";
 import Detail from "./pages/products/detail";
 import editProduct from "./pages/admin/products/edit";
+import listPost from "./pages/admin/news";
+import addPost from "./pages/admin/news/add";
+import editPost from "./pages/admin/news/edit";
+import cartPage from "./pages/cart";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
@@ -34,8 +38,14 @@ router.on({
     "/posts": () => {
         print(postsPage);
     },
+    "/cart": () => {
+        print(cartPage);
+    },
     "/products": () => {
         print(productsPage);
+    },
+    "/product/:id": ({ data }) => {
+        print(Detail, data.id);
     },
     "/signin": () => {
         print(signIn);
@@ -57,6 +67,15 @@ router.on({
     },
     "/admin/list/product": () => {
         print(listProduct);
+    },
+    "/admin/list/post": () => {
+        print(listPost);
+    },
+    "/post/add": () => {
+        print(addPost);
+    },
+    "/post/edit:id": ({ data }) => {
+        print(editPost, data.id);
     },
 });
 router.resolve();

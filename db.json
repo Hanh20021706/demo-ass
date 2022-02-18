@@ -2,58 +2,43 @@
   "categories": [
     {
       "id": 1,
-      "name": "women"
+      "name": "nhẫn"
     },
     {
       "id": 2,
-      "name": "men"
+      "name": "vòng tay"
     }
   ],
   "products": [
     {
       "name": "Long Twist Earrings",
       "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "5600",
-      "quantity": "78",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170613/ass/tr7ucpf2tcakka77r0rv.jpg",
-      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "price": "3400",
+      "quantity": "654",
+      "categorieId": "2",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645199969/ass/aqrjkcpgy1rktffxfcps.jpg",
+      "desc": "sdfgsdg",
       "id": 1
     },
     {
       "name": "Long Twist Earrings",
       "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "56000",
-      "quantity": "56",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170641/ass/juu5a7qicre5e8ttuix4.jpg",
-      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "price": "45000",
+      "quantity": "9789",
+      "cateId": "2",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645205748/ass/efxyupv7wgfyikkhqa7n.jpg",
+      "desc": "ghfh",
       "id": 2
     },
     {
       "name": "Long Twist Earrings",
       "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "34000",
-      "quantity": "55",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170661/ass/joiqpzgmwvcpj5wqdghg.jpg",
-      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
+      "price": "45000",
+      "quantity": "6546",
+      "cateId": "2",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645212167/ass/x8mxk5nt5dvd20w9tf85.jpg",
+      "desc": "tfrewgerg",
       "id": 3
-    },
-    {
-      "name": "Long Twist Earrings",
-      "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "2300",
-      "quantity": "44",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170680/ass/mkgvuyfhhotbk4fe55h2.jpg",
-      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
-      "id": 4
-    },
-    {
-      "name": "Long Twist Earrings",
-      "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "3400",
-      "quantity": "87",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645170704/ass/aoxzhmajbo0jzvahv70y.jpg",
-      "desc": "      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quibusdam enim accusantium numquam nemo adipisci excepturi placeat sint saepe ducimus ipsam itaque, sed quo architecto id. Eius dolorem aperiam accusantium?\n",
-      "id": 5
     }
   ],
   "users": [
@@ -67,6 +52,20 @@
       "email": "hanh@gmail.com",
       "password": "$2a$10$9h8zN6BJWOgFnWTLgRF3B.rGTq8wrxWf.CN.CTJwhO7Srqt78uw6q",
       "username": "hanh",
+      "id": 2
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "title": "lala",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645193008/ass/r8knbvww09cy4mkgebk8.jpg",
+      "desc": " hâhahahha"
+    },
+    {
+      "title": "Coming soon: An Exclusive Virtual Pop-up",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645194406/ass/qehc54mhcopjmsifrxsw.jpg",
+      "desc": "Don’t miss the launch of the Dior Vibe virtual pop-up. A unique event that adds to the series of ephemeral spaces inaugurated in several cities \naround the world.",
       "id": 2
     }
   ]
