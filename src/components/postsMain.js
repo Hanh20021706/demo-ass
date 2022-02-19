@@ -2,8 +2,8 @@ import { getAll } from "../api/post";
 
 const postsMain = {
     async render() {
-        const news = await getAll();
-        console.log(news);
+        const { data } = await getAll();
+        console.log(data);
         return /* html */`
         <main class="main-post">
         <div class="header-main">
@@ -15,7 +15,7 @@ const postsMain = {
         </div>
         <div class="body-posts max-w-7xl mx-auto px-4">
           <div class="grid grid-cols-3 gap-8">
-         ${news.data.map((post) => `
+         ${data.map((post) => `
             <div class="item-post">
             <a href="">
               <img src="${post.img}" alt="" />
@@ -29,8 +29,9 @@ const postsMain = {
             </button>
           </div>
          
-        </div>
+    
             `).join("")}
+            </div>
           
           <div class="footer-posts">
               <button class="btn-footer">

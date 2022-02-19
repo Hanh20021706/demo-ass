@@ -24,24 +24,28 @@ const cartPage = {
          <table class="table-cart">
              <thead class="header-table shadow-md w-full">
                <tr class="">
-                 <th >Tên Sản Phẩm</th>
-                 <th >Giá Sản Phẩm</th>
-                 <th >Số Lượng</th>
-                 <th >Thao Tác</th>
+                 <th class= "th-cart">Tên Sản Phẩm</th>
+                 <th class= "th-cart" >Ảnh sản Phẩm</th>
+                 <th class= "th-cart">Giá Sản Phẩm</th>
+                 <th class= "th-cart">Số Lượng</th>
+                 <th class= "th-cart">Thao Tác</th>
                </tr>
              </thead>
              <tbody>
              ${cart.map((item) => `
-                <tr>
-                  <th >${item.name}</th>
-                  <td>${item.price}</td>
-                  <td>
+                <tr class ="tr-cart">
+                <td class ="td-cart">${item.name}</td>
+                  <td class ="td-cart">   <div class="text-center">    <a href=""><img width="200px" src="${item.img}" alt=""></a></div></td>
+                  <td class ="td-cart">${item.price}</td>
+                  <td class ="td-cart">
                     <button data-id="${item.id}" class="btn btn-increase btn-plus"><i class="fa-solid fa-plus"></i></button>
                         ${item.quantity}
                     <button data-id="${item.id}" class="btn btn-decrease btn-minus"><i class="fa-solid fa-minus"></i></button>
                   </td>
-                  <td>
-                    <button  data-id="${item.id}" class="btn btn-remove"><i class="fa-solid fa-trash"></i></button>
+                  <td class ="td-cart">
+                    <button  data-id="${item.id}" class="btn btn-remove">
+                        <i class="fa-solid fa-delete-left text-red-500 text-2xl"></i>
+                    </button>
                   </td>
                 </tr>
                 
@@ -58,12 +62,12 @@ const cartPage = {
         btns.forEach((btn) => {
             const { id } = btn.dataset;
             btn.addEventListener("click", () => {
-                if (btn.classList.contains(".btn-increase")) {
+                if (btn.classList.contains("btn-increase")) {
                     increaseQuantityFromCart(id, () => {
                         reRender(cartPage, "#app");
                         toastr.success("Tăng số lượng thành công!");
                     });
-                } else if (btn.classList.contains(".btn-decrease")) {
+                } else if (btn.classList.contains("btn-decrease")) {
                     decreaseQuantityFromCart(id, () => {
                         reRender(cartPage, "#app");
                         toastr.success("Bạn đang giảm số lượng sản phẩm!");

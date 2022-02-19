@@ -2,43 +2,40 @@
   "categories": [
     {
       "id": 1,
-      "name": "nhẫn"
+      "name": "Necklaces"
     },
     {
       "id": 2,
-      "name": "vòng tay"
+      "name": "Earrings"
+    },
+    {
+      "id": 3,
+      "name": "Breaceletes"
+    },
+    {
+      "id": 4,
+      "name": "ring"
     }
   ],
   "products": [
     {
-      "name": "Long Twist Earrings",
-      "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "3400",
-      "quantity": "654",
-      "categorieId": "2",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645199969/ass/aqrjkcpgy1rktffxfcps.jpg",
-      "desc": "sdfgsdg",
-      "id": 1
-    },
-    {
-      "name": "Long Twist Earrings",
-      "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "45000",
-      "quantity": "9789",
-      "cateId": "2",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645205748/ass/efxyupv7wgfyikkhqa7n.jpg",
-      "desc": "ghfh",
-      "id": 2
-    },
-    {
+      "id": 3,
       "name": "Long Twist Earrings",
       "color": "Màu xanh Dior Oblique Jacquard",
       "price": "45000",
       "quantity": "6546",
-      "cateId": "2",
       "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645212167/ass/x8mxk5nt5dvd20w9tf85.jpg",
-      "desc": "tfrewgerg",
-      "id": 3
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum magni facilis quod atque eius minima, nemo laudantium, quam expedita alias ad temporibus reprehenderit voluptatibus modi, vitae cum omnis sit!"
+    },
+    {
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "45000",
+      "quantity": "45",
+      "cateId": "1",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645239975/ass/y7jpjeeeb2urirdankcy.jpg",
+      "desc": "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum magni facilis quod atque eius minima, nemo laudantium, quam expedita alias ad temporibus reprehenderit voluptatibus modi, vitae cum omnis sit!\n",
+      "id": 4
     }
   ],
   "users": [
@@ -60,13 +57,19 @@
       "id": 1,
       "title": "lala",
       "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645193008/ass/r8knbvww09cy4mkgebk8.jpg",
-      "desc": " hâhahahha"
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis."
     },
     {
-      "title": "Coming soon: An Exclusive Virtual Pop-up",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645194406/ass/qehc54mhcopjmsifrxsw.jpg",
-      "desc": "Don’t miss the launch of the Dior Vibe virtual pop-up. A unique event that adds to the series of ephemeral spaces inaugurated in several cities \naround the world.",
-      "id": 2
+      "id": 2,
+      "title": "bai viet cua tao",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645241224/ass/wtwysfhbsobcbp73f7ai.jpg",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis."
+    },
+    {
+      "title": "bai viet cua tao",
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645241978/ass/ueu1xgq4ai0pdgzakl1k.jpg",
+      "desc": "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis.\n",
+      "id": 3
     }
   ]
 }

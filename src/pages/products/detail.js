@@ -66,7 +66,7 @@ const Detail = {
         btnAddToCart.addEventListener("click", async () => {
             const { data } = await get(id);
             addToCart({ ...data, quantity: inpValue.value ? +inpValue.value : 1 }, () => {
-                console("được rồi nè");
+                // console("được rồi nè");
             });
         });
     },

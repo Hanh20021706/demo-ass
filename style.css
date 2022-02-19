@@ -357,10 +357,14 @@ img{
     background-color: #000;
 }
 .header-table th{
-    padding: 10px 0px;
+    padding: 10px 10px;
     color: #fff;
 }
 .btn-plus,.btn-minus{
     border: 1px solid #ccc;
     padding: 0px 10px;
+}
+
+.td-cart{
+    text-align: center;
 }

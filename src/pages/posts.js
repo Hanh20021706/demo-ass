@@ -3,11 +3,11 @@ import Header from "../components/header";
 import postsMain from "../components/postsMain";
 
 const postsPage = {
-    render() {
+    async render() {
         return /* html */`
         <div>
         ${Header.render()}
-        ${postsMain.render()}
+        ${await postsMain.render()}
         ${Footer.render()}
         </div>
         `;
