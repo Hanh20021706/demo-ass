@@ -19,23 +19,34 @@
   ],
   "products": [
     {
-      "id": 3,
-      "name": "Long Twist Earrings",
-      "color": "Màu xanh Dior Oblique Jacquard",
-      "price": "45000",
-      "quantity": "6546",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645212167/ass/x8mxk5nt5dvd20w9tf85.jpg",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum magni facilis quod atque eius minima, nemo laudantium, quam expedita alias ad temporibus reprehenderit voluptatibus modi, vitae cum omnis sit!"
-    },
-    {
       "name": "Long Twist Earrings",
       "color": "Màu xanh Dior Oblique Jacquard",
       "price": "45000",
       "quantity": "45",
-      "cateId": "1",
+      "categorieId": 1,
       "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645239975/ass/y7jpjeeeb2urirdankcy.jpg",
       "desc": "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorum magni facilis quod atque eius minima, nemo laudantium, quam expedita alias ad temporibus reprehenderit voluptatibus modi, vitae cum omnis sit!\n",
       "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "8900",
+      "quantity": "2",
+      "categorieId": 2,
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645369435/ass/c8vlppgwpdycs785frdt.jpg",
+      "desc": "ughuv"
+    },
+    {
+      "name": "Long Twist Earrings",
+      "color": "Màu xanh Dior Oblique Jacquard",
+      "price": "2300",
+      "quantity": "6",
+      "categorieId": 2,
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645370739/ass/zbimtgami0tubt0lac3c.jpg",
+      "desc": "sfafc ",
+      "id": 6
     }
   ],
   "users": [
@@ -56,20 +67,20 @@
     {
       "id": 1,
       "title": "lala",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645193008/ass/r8knbvww09cy4mkgebk8.jpg",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis."
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645367917/ass/dqs9xn4kyzbbqo9omue8.jpg",
+      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis."
     },
     {
       "id": 2,
       "title": "bai viet cua tao",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645241224/ass/wtwysfhbsobcbp73f7ai.jpg",
-      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis."
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645367946/ass/i4hickjlt67tuctqm4g9.jpg",
+      "desc": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis."
     },
     {
+      "id": 3,
       "title": "bai viet cua tao",
-      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645241978/ass/ueu1xgq4ai0pdgzakl1k.jpg",
-      "desc": "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis.\n",
-      "id": 3
+      "img": "http://res.cloudinary.com/dkpulhfe7/image/upload/v1645367958/ass/kzciijafnuwtbwzkenz7.jpg",
+      "desc": "     Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quibusdam enim sunt id, vel molestias, ipsa ad error eos laborum tenetur ratione sed aliquid, beatae soluta deserunt iste nam nobis.\n"
     }
   ]
 }

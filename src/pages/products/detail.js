@@ -26,6 +26,7 @@ const Detail = {
             </div>
             <div class="intro-product">
               <div class="title-intro">
+              <p>${data.categorie.name}</p>
                 <h2>${data.name}</h2>
                 <p>${data.color}</p>
                 <span class="price-product"> $ ${data.price} </span>

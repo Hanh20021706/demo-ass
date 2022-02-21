@@ -1,12 +1,12 @@
 import toastr from "toastr";
-import { getAll, remove } from "../../../api/products";
+import { getAllCate, remove } from "../../../api/products";
 import AdminNav from "../../../components/adminNav";
 import { reRender } from "../../../utils";
 import "toastr/build/toastr.min.css";
 
 const listProduct = {
     async render() {
-        const { data } = await getAll();
+        const { data } = await getAllCate();
         // console(data);
         return /* html */`
         <div> ${AdminNav.render()} </div>
@@ -107,7 +107,7 @@ const listProduct = {
                     
                 </td>
                 <td class="px-4 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-900">   ${product.cateId}</div>
+                    <div class="text-sm text-gray-900">   ${product.categorie.name}</div>
                     
                 </td>
                  <td class="px-4 py-4  text-sm text-gray-500">

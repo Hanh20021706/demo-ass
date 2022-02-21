@@ -8,6 +8,7 @@ import { reRender } from "../../../utils";
 const editProduct = {
     async render(id) {
         const { data } = await get(id);
+
         return /* html */`
         <div> ${AdminNav.render()} </div>
         <div class="max-w-5xl mx-auto">
@@ -162,6 +163,7 @@ const editProduct = {
                 color: document.querySelector("#color-product").value,
                 price: document.querySelector("#price-product").value,
                 quantity: document.querySelector("#quantity-product").value,
+                categorieId: 2,
                 img: productImageLink || productImg.src,
                 desc: document.querySelector("#desc-product").value,
             });

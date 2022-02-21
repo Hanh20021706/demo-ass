@@ -1,4 +1,6 @@
 import axios from "axios";
+import $ from "jquery";
+import validate from "jquery-validation";
 import listProduct from ".";
 import { getAll } from "../../../api/categories";
 import { add } from "../../../api/products";
@@ -31,7 +33,7 @@ const addProduct = {
                         <input
                           id="name-product"
                           type="text"
-                          name=""
+                          name="name-product"
                           class="mt-1 px-8 py-2 w-full bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                           placeholder=""/>
                       </label>
@@ -58,7 +60,7 @@ const addProduct = {
                       <input
                         id="color-product"
                         type="text"
-                        name=""
+                        name="color-product"
                         class="mt-1 px-8 py-2 w-full bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                         placeholder=""/>
                     </label>
@@ -72,7 +74,7 @@ const addProduct = {
                       <input
                         id="price-product"
                         type="number"
-                        name=""
+                        name="price-product"
                         class="mt-1 px-8 py-2 w-full bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                         placeholder=""/>
                     </label>
@@ -87,7 +89,7 @@ const addProduct = {
                     <input
                       id="quantity-product"
                       type="number"
-                      name=""
+                      name="quantity-product"
                       class="mt-1 px-8 py-2 w-full bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                       placeholder=""/>
                   </label>
@@ -102,7 +104,7 @@ const addProduct = {
                     <div class="mt-1">
                       <textarea
                         id="desc-product"
-                        name="about"
+                        name="desc-product"
                         rows="3"
                         class="mt-1 w-full px-3 py-2 bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1"
                         placeholder=""></textarea>
@@ -133,36 +135,103 @@ const addProduct = {
         `;
     },
     afterRender() {
-        const formAdd = document.querySelector("#form-add-product");
+        const formAdd = $("#form-add-product");
         const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/dkpulhfe7/image/upload";
         const CLOUDINARY_PRESET = "votxzxvk";
 
-        formAdd.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const file = document.querySelector("#img-product").files[0];
-
-            const formData = new FormData();
-            formData.append("file", file);
-            formData.append("upload_preset", CLOUDINARY_PRESET);
-
-            const { data } = await axios.post(CLOUDINARY_API, formData, {
-                headers: {
-                    "Content-Type": "application/form-data",
+        formAdd.validate({
+            rules: {
+                "name-product": {
+                    required: true,
+                    minlength: 10,
                 },
-            });
-            add({
-                name: document.querySelector("#name-product").value,
-                color: document.querySelector("#color-product").value,
-                price: document.querySelector("#price-product").value,
-                quantity: document.querySelector("#quantity-product").value,
-                cateId: document.querySelector("#cate-product").value,
-                img: data.url,
-                desc: document.querySelector("#desc-product").value,
+                "price-product": {
+                    required: true,
+                    step: 10,
+                },
+                "quantity-product": {
+                    required: true,
+                    step: 10,
+                },
+                "color-product": {
+                    required: true,
+                    minlength: 10,
+                },
+            },
+            messages: {
+                "name-product": {
 
-            });
-            window.location.href = "/admin/list/product";
-            reRender(listProduct, "#app");
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 10 ký tự",
+                },
+                "price-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 10 ký tự",
+                },
+                "quantity-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 10 ký tự",
+                },
+                "color-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 10 ký tự",
+                },
+            },
+            submitHandler: () => {
+                async function handleAddProduct() {
+                    const file = document.querySelector("#img-product").files[0];
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLOUDINARY_PRESET);
+
+                    const { data } = await axios.post(CLOUDINARY_API, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    add({
+                        name: document.querySelector("#name-product").value,
+                        color: document.querySelector("#color-product").value,
+                        price: document.querySelector("#price-product").value,
+                        quantity: document.querySelector("#quantity-product").value,
+                        categorieId: Number(document.querySelector("#cate-product").value),
+                        img: data.url,
+                        desc: document.querySelector("#desc-product").value,
+
+                    });
+                    window.location.href = "/admin/list/product";
+                    reRender(listProduct, "#app");
+                }
+                handleAddProduct();
+            },
         });
+
+        // formAdd.addEventListener("submit", async (e) => {
+        //     e.preventDefault();
+        //     const file = document.querySelector("#img-product").files[0];
+
+        //     const formData = new FormData();
+        //     formData.append("file", file);
+        //     formData.append("upload_preset", CLOUDINARY_PRESET);
+
+        //     const { data } = await axios.post(CLOUDINARY_API, formData, {
+        //         headers: {
+        //             "Content-Type": "application/form-data",
+        //         },
+        //     });
+        //     add({
+        //         name: document.querySelector("#name-product").value,
+        //         color: document.querySelector("#color-product").value,
+        //         price: document.querySelector("#price-product").value,
+        //         quantity: document.querySelector("#quantity-product").value,
+        //         categorieId: Number(document.querySelector("#cate-product").value),
+        //         img: data.url,
+        //         desc: document.querySelector("#desc-product").value,
+
+        //     });
+        //     window.location.href = "/admin/list/product";
+        //     reRender(listProduct, "#app");
+        // });
     },
 };
 export default addProduct;
