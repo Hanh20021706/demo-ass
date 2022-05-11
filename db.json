@@ -51,16 +51,22 @@
   ],
   "users": [
     {
-      "email": "admin@gmail.com",
-      "password": "$2a$10$P4kuDjnMe1sH.OK8RLi4UebA1c72AjQUFGqmLl/n5r7An.gfVQzFC",
-      "username": "admin",
-      "id": 1
-    },
-    {
       "email": "hanh@gmail.com",
       "password": "$2a$10$9h8zN6BJWOgFnWTLgRF3B.rGTq8wrxWf.CN.CTJwhO7Srqt78uw6q",
       "username": "hanh",
-      "id": 2
+      "id": 1
+    },
+    {
+      "email": "haha@gmail.com",
+      "password": 123456,
+      "username": "haha",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$vGl8vfvoQyTkvOFJO1jgNuiKLhRNgaeh4FQAu.AV3yLmG35Wr5rW.",
+      "username": "admin",
+      "id": 1
     }
   ],
   "post": [

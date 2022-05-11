@@ -28,7 +28,12 @@ const signIn = {
                 <button class="btn-next">
                     NEXT
                 </button>
+                <a href="/signup" class="create-ac">
+                create account
+                </a>
              </form>
+
+            
         </main>
        
        

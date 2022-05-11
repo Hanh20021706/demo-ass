@@ -12,7 +12,7 @@ const listProduct = {
         <div> ${AdminNav.render()} </div>
         <div class ="max-w-[84rem]  mx-auto">
         <div class ="flex my-8 justify-between "> 
-        <h2 class = "font-sans text-2xl font-bold uppercase"> quản lý tin tức </h2> 
+         <h2 class = "font-sans text-2xl font-bold uppercase"> quản lý tin tức </h2> 
     
          <div class =""> 
              <a href="/product/add" class="sm:ml-3">

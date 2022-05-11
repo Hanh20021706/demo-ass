@@ -151,7 +151,7 @@ const addProduct = {
                 },
                 "quantity-product": {
                     required: true,
-                    step: 10,
+                    step: 3,
                 },
                 "color-product": {
                     required: true,
